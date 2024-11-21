@@ -7,4 +7,17 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
+  server: {
+    port: 3000, // Optional: Customize the dev server port
+  },
+  build: {
+    outDir: 'dist', // Output directory for production build
+  },
+  resolve: {
+    alias: {
+      '@': '/src', // Optional: Create aliases for cleaner imports
+    },
+  },
+  // Optional: Rewrite rules for client-side routing
+  base: '/',
 });
